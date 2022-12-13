@@ -18,11 +18,26 @@
 	<description>Maven Standalone Application</description>
 
 	<properties>
-		<sonar.host.url>http://35.154.242.68:9000/</sonar.host.url>
+		<sonar.host.url>http://localhost:5000/</sonar.host.url> 
 		<sonar.login>admin</sonar.login>
-		<sonar.password>admin</sonar.password>
+		<sonar.password>school1</sonar.password>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
+	<distributionManagement>
+	    <repository>
+	      <id>nexus</id>
+	      <name>Landmark Technologies Releases Nexus Repository</name>
+	      <url>http://localhost:8082/repository/javaap-releases/</url>
+	    </repository>
+	    
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>Landmark Technologies Snapshot Nexus Repository </name>
+	      <url>http://localhost:8082/repository/javaaap-snapshots/</url>
+	    </snapshotRepository>
+	    
+	</distributionManagement>
 
 	<dependencies>
 
